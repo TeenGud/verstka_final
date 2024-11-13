@@ -827,12 +827,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: calc(100% - 320px);
   margin-left: 320px;
   padding: 35px;
-  background: #f8f8f8;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 15px;
-  max-width: 1240px; }
+  background: #f8f8f8; }
   .footer--disable {
     display: none; }
   @media screen and (max-width: 1120px) {
@@ -841,8 +836,17 @@ input[type=number]::-webkit-outer-spin-button {
       margin-left: 0; } }
   @media screen and (max-width: 650px) {
     .footer {
-      flex-direction: column;
       padding: 15px; } }
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+    max-width: 1240px;
+    margin: 0 auto; }
+    @media screen and (max-width: 650px) {
+      .footer__wrapper {
+        flex-direction: column; } }
   .footer__text {
     font-weight: 500;
     font-size: 14px;
