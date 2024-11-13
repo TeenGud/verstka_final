@@ -1,0 +1,112 @@
+.description {
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tabletWidth) {
+    display: flex;
+    align-items: start;
+    gap: 48px;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-top: 22px;
+  }
+
+  &__content {
+    @media screen and (min-width: 1088px) {
+      min-width: 312px;
+      max-width: 450px;
+    }
+    @media screen and (min-width: 1440px) {
+      min-width: 490px;
+      max-width: 650px;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #1b1c21;
+    margin-top: 14px;
+
+    @media screen and (min-width: 1650px) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1088px) {
+      margin: 0;
+    }
+
+    &--additional {
+      &-first {
+        display: none;
+
+        @media screen and (min-width: 330px) {
+          display: block;
+        }
+
+        @media screen and (min-width: 1440px) {
+          display: none;
+        }
+      }
+      &-second {
+        display: none;
+
+        @media screen and (min-width: 767px) {
+          display: none;
+        }
+
+        @media screen and (min-width: 1440px) {
+          display: block;
+          padding-top: 20px;
+        }
+      }
+
+      &-third {
+        padding-top: 20px;
+
+        @media screen and (max-width: 1000px) {
+          padding-top: 0px;
+        }
+      }
+    }
+
+  }
+  &__button {
+      .button-show.button-show__button {
+        display: block;
+    }
+  }
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__img {
+    position: static;
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 35px;
+    max-width: 750px;
+
+    @media screen and (min-width: 500px) {
+      position: static;
+      height: auto;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+      min-height: 208px;
+      min-width: 360px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 100%;
+      height: auto;
+      min-height: 307px;
+      min-width: 531px;
+      border-radius: 12px;
+    }
+  }
+}

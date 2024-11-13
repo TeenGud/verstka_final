@@ -1,0 +1,25 @@
+.media-query {
+  @media screen and (max-width: $mobileWidth) {
+    display: none;
+  }
+}
+.disable {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0.9;
+
+  &__menu {
+    z-index: 1;
+  }
+
+  &__dialogs {
+    z-index: 3;
+  }
+}

@@ -1,0 +1,94 @@
+.main {
+  width: calc(100% - #{$menuWidth});
+  margin-left: $menuWidth;
+  padding: 35px;
+  background: $bgColor;
+
+  &--disable {
+    display: none;
+  }
+
+  @media screen and (max-width: 1120px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 800px){
+    padding: 35px 20px;
+  }
+  @media screen and (max-width: $mobileWidth){
+    padding: 35px 15px;
+  }
+
+  &__navigation {
+    margin-top: 8px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1120px){
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 6px;
+    transition: all .3s;
+    border: 2px solid $bgColor;
+    padding: 9px 15px;
+    min-width: fit-content;
+
+    a {
+      display: block;
+      color: $textGray;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &:hover {
+      border: 2px solid $blueAccentColor;
+      background: $bgColorWhite;
+    }
+  }
+}
+.buttons-main {
+  @media screen and (max-width: 1120px) {
+    display: none;
+  }
+}
+.title-and-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    border-radius: 2px;
+    background: $blueAccentColor;
+
+    left: calc(#{$menuWidth} + 1px);
+    top: 32px;
+
+    @media screen and(max-width: 1120px){
+      left: 0;
+      top: 120px;
+    }
+  }
+}

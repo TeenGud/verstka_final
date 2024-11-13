@@ -1,0 +1,42 @@
+.footer {
+  width: calc(100% - #{$menuWidth});
+  margin-left: $menuWidth;
+  padding: 35px;
+  background: $bgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+  max-width: $maxWidth;
+
+  &--disable {
+    display: none;
+  }
+
+  @media screen and (max-width: 1120px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    flex-direction: column;
+    padding: 15px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: $textGray;
+    opacity: 0.72;
+    width: 100%;
+
+    @media screen and (max-width: $tabletWidth) {
+      text-align: center;
+    }
+  }
+
+  &__break {
+    @media screen and (max-width: $tabletWidth){
+      display: none;
+    }
+  }
+}

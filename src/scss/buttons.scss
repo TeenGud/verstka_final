@@ -1,0 +1,139 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+      > .buttons__item {
+        background: $accentColorHover;
+      }
+      > .buttons__link {
+        color: $textGray;
+      }
+    }
+  }
+
+  &__item {
+    background: $accentColor;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    cursor: pointer;
+
+    &--disable {
+      display: none;
+
+      @media screen and (max-width: 1120px){
+        display: flex;
+      }
+    }
+
+    &:hover {
+      background: $accentColorHover;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    color: $text;
+    transition: color 0.3s;
+  }
+}
+
+.button-with-arrow {
+  border: 2px solid $accentColor;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: $bgColorWhite;
+  background-image: url('../img/svgIcons/checkmark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.button-order {
+  text-align: start;
+  background: $accentColor;
+  padding-left: 12px;
+  border-radius: 16px;
+  width: 119px;
+  height: 32px;
+  border: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 200%;
+  text-transform: uppercase;
+  color: white;
+  background-image: url(../img/svgIcons/whiteArrow.svg);
+  background-repeat: no-repeat;
+  background-position: 100px 50%;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $accentColorHover;
+    background-image: url(../img/svgIcons/whiteArrow.svg);
+    background-repeat: no-repeat;
+    background-position: 95px 50%;
+  }
+}
+
+.button-show {
+  &__button {
+    border: none;
+    background: none;
+    margin-top: 24px;
+    margin-left: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #1b1c21;
+
+    cursor: pointer;
+
+    transition: color 0.3s;
+
+    &--hide {
+      height: auto;
+      &::after {
+        content: '';
+        display: block;
+        background: url('../img/svgIcons/link.svg') no-repeat;
+        height: 11px;
+        width: 10px;
+        position: relative;
+        left: -22px;
+        bottom: 15px;
+        transform: rotate(180deg);
+      }
+    }
+    &--show {
+      &::after {
+        content: '';
+        display: block;
+        background: url('../img/svgIcons/link.svg') no-repeat;
+        height: 11px;
+        width: 10px;
+        position: relative;
+        left: -22px;
+        bottom: 15px;
+      }
+    }
+
+    &:hover {
+      color: $blueAccentColor;
+    }
+  }
+}

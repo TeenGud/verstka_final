@@ -1,0 +1,109 @@
+.prices {
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  .swiper {
+    display: none;
+
+    @media screen and (max-width: $tabletWidth) {
+      display: flex;
+    }
+  }
+
+  &__wrapper {
+    list-style: none;
+    height: 100%;
+    overflow: unset;
+    padding-top: 16px;
+    margin-left: 0px;
+    column-gap: 0px;
+    margin-top: 0;
+    display: none;
+
+    @media screen and (max-width: $tabletWidth) {
+      display: flex;
+    }
+
+    .swiper-slide {
+      flex-shrink: 0;
+      width: 300px;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    color: $textGray;
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    color: $text;
+    margin-bottom: 16px;
+  }
+
+  &__slide {
+    display: block;
+    border-radius: 6px;
+    width: 260px;
+    height: 200px;
+    background: $bgColorWhite;
+    padding: 16px;
+    position: relative;
+  }
+
+  &__button-wrapper {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  &__button {
+    height: auto;
+    width: 350px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $text;
+    background-image: url(../img/svgIcons/redArrow.svg);
+    background-repeat: no-repeat;
+    background-position: 302px 50%;
+    margin-top: 16px;
+    text-align: start;
+    padding-left: 0;
+    transition: color 0.3s;
+
+    @media screen and (max-width: 350px){
+      background-position: 115px 83%;
+    }
+
+    &:hover {
+      color: $textGray;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $text;
+    margin-top: 32px;
+  }
+
+  &__break {
+    display: none;
+
+    @media screen and (max-width: 350px){
+      display: block;
+    }
+  }
+
+}
+

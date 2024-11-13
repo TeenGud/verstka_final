@@ -1,0 +1,23 @@
+.sub-title {
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $textGray;
+
+  background: linear-gradient(270deg, #fff 0%, #f8f8f8 100%);
+  width: calc(100% + 35px);
+  height: 56px;
+  padding: 15px;
+
+  @media screen and (max-width: 800px) {
+    width: calc(100% + 20px);
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    height: auto;
+  }
+}

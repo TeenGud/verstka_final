@@ -1,0 +1,98 @@
+.types-of-technique {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $maxWidth;
+
+  &__list {
+    margin: 0 auto;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    margin-top: 24px;
+    height: 160px;
+    overflow: hidden;
+
+    &--height {
+      &-auto {
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 1430px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 1120px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 830px){
+      column-gap: 24px;
+    }
+    @media screen and (max-width: 750px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $mobileWidth) {
+      display: flex;
+      height: 100%;
+      overflow: unset;
+      padding-top: 16px;
+      margin-left: 0px;
+      column-gap: 0px;
+      margin-top: 0;
+    }
+  }
+  &__item {
+    width: 240px;
+
+    @media screen and (max-width: 830px){
+      width: 224px;
+    }
+
+    @media screen and (max-width: $mobileWidth) {
+      margin-right: 16px;
+      width: 240px;
+    }
+  }
+  &__link {
+    display: block;
+    position: relative;
+    background: $bgColorWhite;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    width: 240px;
+    height: 160px;
+    padding: 16px;
+    transition: all .3s;
+
+    &:hover {
+      background: #fff9f9;
+      
+    }
+
+    @media screen and (max-width: 830px){
+      width: 224px;
+    }
+    @media screen and (max-width: $mobileWidth) {
+      margin: 0 auto;
+      width: 240px;
+    }
+  }
+  &__text {
+    color: $text;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+  }
+}
