@@ -3,11 +3,6 @@
   margin-left: $menuWidth;
   padding: 35px;
   background: $bgColor;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 15px;
-  max-width: $maxWidth;
 
   &--disable {
     display: none;
@@ -18,8 +13,19 @@
     margin-left: 0;
   }
   @media screen and (max-width: $tabletWidth) {
-    flex-direction: column;
     padding: 15px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    @media screen and (max-width: $tabletWidth) {
+      flex-direction: column;
+    }
   }
   &__text {
     font-weight: 500;
