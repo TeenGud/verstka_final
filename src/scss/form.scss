@@ -2,7 +2,7 @@
   padding: 0;
   border: none;
   width: 440px;
-  height: 940px;
+  height: auto;
   box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
     -2px 0 4px 0 rgba(69, 79, 126, 0.02);
   background: $bgColorWhite;
@@ -12,16 +12,16 @@
   margin: 0;
   margin-left: auto;
   z-index: 3;
+  bottom: 0;
 
   @media screen and (max-width: 600px) {
     width: 320px;
-    height: 676px;
     padding-top: 50px;
   }
 
   @media screen and (max-width: 440px) {
-
     width: 100%;
+    box-shadow: none;
   }
 
   &__input {

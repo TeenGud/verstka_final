@@ -3,6 +3,7 @@
   margin-left: $menuWidth;
   padding: 35px;
   background: $bgColor;
+  // max-width: calc(1440px - #{$menuWidth});
 
   &--disable {
     display: none;
@@ -65,16 +66,20 @@
   }
 }
 .title-and-buttons-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+   @media screen and (max-width: 1440px) {
+    position: static;
+   }
 }
 
 .title {
   font-weight: 700;
   font-size: 28px;
 
-  &::before {
+  &::after {
     content: '';
     display: block;
     position: absolute;
@@ -83,8 +88,14 @@
     border-radius: 2px;
     background: $blueAccentColor;
 
-    left: calc(#{$menuWidth} + 1px);
-    top: 32px;
+    left: -33px;
+    top: -2px;
+
+    @media screen and (max-width: 1440px){
+      position: absolute;
+      left: calc(#{$menuWidth} + 1px);
+      top: 32px;
+    }
 
     @media screen and(max-width: 1120px){
       left: 0;

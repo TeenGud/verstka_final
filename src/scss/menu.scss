@@ -1,17 +1,23 @@
 .mobile-menu {
   padding: 24px;
   width: $menuWidth;
-  height: 100%;
+  height: auto;
   position: absolute;
+  background: $bgColorWhite;
   top: 0;
   left: 0;
-  z-index: 3;
-  background: $bgColorWhite;
+  bottom: 0;
+
+  @media screen and (max-width: 1440px) {
+    z-index: 3;
+  }
 
   @media screen and (max-width: 1120px) {
     display: none;
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
-    height: 1024px;
+  }
+  @media screen and (max-width: 440px) {
+    box-shadow: none;
   }
 
   &--show {
@@ -22,6 +28,7 @@
       flex-direction: column;
       width: 100%;
       padding: 16px;
+
     }
   }
 }

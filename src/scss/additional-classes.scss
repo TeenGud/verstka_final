@@ -21,5 +21,9 @@
 
   &__dialogs {
     z-index: 3;
+
+    @media screen and (max-width: 440px) {
+      opacity: 1;
+    }
   }
 }
