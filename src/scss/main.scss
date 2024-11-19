@@ -1,6 +1,5 @@
 .main {
-  width: calc(100% - #{$menuWidth});
-  margin-left: $menuWidth;
+
   padding: 35px;
   background: $bgColor;
   // max-width: calc(1440px - #{$menuWidth});

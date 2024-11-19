@@ -1,13 +1,12 @@
 .mobile-menu {
   padding: 24px;
   width: $menuWidth;
-  height: auto;
-  position: absolute;
+  min-width: $menuWidth;
+  height: 100vh;
+  position: sticky;
   background: $bgColorWhite;
-  top: 0;
   left: 0;
-  bottom: 0;
-
+  top: 0;
   @media screen and (max-width: 1440px) {
     z-index: 3;
   }
@@ -15,20 +14,25 @@
   @media screen and (max-width: 1120px) {
     display: none;
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+    overflow: scroll;
   }
-  @media screen and (max-width: 440px) {
+
+  @media screen and (max-width: 360px) {
     box-shadow: none;
+    padding-bottom: 16px;
   }
 
   &--show {
     display: block;
+    position: absolute;
 
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 360px) {
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 16px;
-
+      padding: 26px;
+      margin-left: 10px;
+      margin: 0 auto;
     }
   }
 }
@@ -90,9 +94,10 @@
 
 .footer-aside {
   position: relative;
-  bottom: -140px;
+  bottom: -60px;
+  margin-bottom: 16px;
 
-  @media screen and (max-width: 440px) {
+  @media screen and (max-width: 360px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +134,7 @@
   }
 
   &__languages {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 32px;
     display: flex;
     gap: 7px;
