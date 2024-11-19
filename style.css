@@ -38,7 +38,12 @@ body {
   font-family: "TT Lakes";
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   position: relative; }
+  @media screen and (max-width: 1120px) {
+    body {
+      display: block; } }
 
 .swiper-pagination {
   display: none; }
@@ -208,30 +213,35 @@ body {
 .mobile-menu {
   padding: 24px;
   width: 320px;
-  height: auto;
-  position: absolute;
+  min-width: 320px;
+  height: 100vh;
+  position: sticky;
   background: #fff;
-  top: 0;
   left: 0;
-  bottom: 0; }
+  top: 0; }
   @media screen and (max-width: 1440px) {
     .mobile-menu {
       z-index: 3; } }
   @media screen and (max-width: 1120px) {
     .mobile-menu {
       display: none;
-      box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2); } }
-  @media screen and (max-width: 440px) {
+      box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+      overflow: scroll; } }
+  @media screen and (max-width: 360px) {
     .mobile-menu {
-      box-shadow: none; } }
+      box-shadow: none;
+      padding-bottom: 16px; } }
   .mobile-menu--show {
-    display: block; }
-    @media screen and (max-width: 440px) {
+    display: block;
+    position: absolute; }
+    @media screen and (max-width: 360px) {
       .mobile-menu--show {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 16px; } }
+        padding: 26px;
+        margin-left: 10px;
+        margin: 0 auto; } }
 
 .header-aside {
   display: flex;
@@ -279,8 +289,9 @@ body {
 
 .footer-aside {
   position: relative;
-  bottom: -140px; }
-  @media screen and (max-width: 440px) {
+  bottom: -60px;
+  margin-bottom: 16px; }
+  @media screen and (max-width: 360px) {
     .footer-aside {
       display: flex;
       flex-direction: column;
@@ -304,7 +315,7 @@ body {
       .footer-aside__number a:hover {
         color: #7e7e82; }
   .footer-aside__languages {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 32px;
     display: flex;
     gap: 7px; }
@@ -389,8 +400,6 @@ body {
     display: none; }
 
 .main {
-  width: calc(100% - 320px);
-  margin-left: 320px;
   padding: 35px;
   background: #f8f8f8; }
   .main--disable {
@@ -842,8 +851,6 @@ body {
           width: 250px; } }
 
 .footer {
-  width: calc(100% - 320px);
-  margin-left: 320px;
   padding: 35px;
   background: #f8f8f8; }
   .footer--disable {
@@ -883,7 +890,7 @@ body {
   padding: 0;
   border: none;
   width: 440px;
-  height: auto;
+  height: 100vh;
   box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
   background: #fff;
   position: absolute;
@@ -892,7 +899,10 @@ body {
   margin: 0;
   margin-left: auto;
   z-index: 3;
-  bottom: 0; }
+  overflow-y: scroll; }
+  @media screen and (max-width: 1120px) {
+    .dialog {
+      overflow: scroll; } }
   @media screen and (max-width: 600px) {
     .dialog {
       width: 320px;
@@ -918,13 +928,15 @@ body {
       padding: 40px 16px;
       padding-bottom: 16px; } }
   .form__button {
-    position: absolute;
-    left: -70px;
+    position: fixed;
+    right: 460px;
     top: 34px; }
     @media screen and (max-width: 600px) {
       .form__button {
+        position: absolute;
         left: 12px;
-        top: -22px; } }
+        top: -22px;
+        right: 0; } }
   .form__button-order {
     text-align: right; }
   .form__title {
